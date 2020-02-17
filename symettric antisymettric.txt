@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    int *dizi;
+    int boyut;
+    bool simetri = true;
+    cin >> boyut;
+ 
+    dizi = (int*)malloc(boyut * sizeof(int));//malloc function kullandým  cunku dizinin boyutunu kullanici belirmesini istedim.
+
+    for (int i = 0; i < boyut; i++)
+    {
+        cin >> dizi[i];
+    }
+
+    for (int j = 0; j < boyut/2; j++)//bölü iki yapmamým sebebi dizi bir bastan bir sondan kontrol edicek onnun icin ortada bulucasacaklar daha kontrol etmesine gerek yok.
+    {
+        if (dizi[j] != dizi[boyut - j - 1]) {//-1 cikariyoruz cunku diziler 0dan baþlýyor ilk eleman dizi[0]=dizi[dizisayýsýnýndan bir önceki sayýya]
+            simetri = false;
+        }
+    }
+     
+    if (simetri) {
+        cout << "The sequence is symmetric";
+    }
+    else {
+        cout << "The sequence is not symettric";
+    }
+
+
+    return 0;
+}

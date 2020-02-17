@@ -1,0 +1,51 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   /* int a = 60;  //60=0011 1100
+      int b = 13;  //13=0000 1101
+      int c = 0;
+
+    c = a & b;     //12= 0000 1100
+    cout << "VALUE OF C = " << c << endl;
+    c = a | b;     // 61 = 0011 1101
+    cout << "VALUE OF C = " << c << endl;
+    c = a ^ b;     // 49=0011 0001
+    cout << "VALUE OF C = " << c << endl;
+    c = ~a;        //-61=0011 1101
+    cout << "VALUE OF C = " << c << endl;
+    c = a << 2;    //240=1111 0000
+    cout << "VALUE OF C = " << c << endl;
+    c = a >> 2;    // 15=0000 1111
+    cout << "VALUE OF C = " << c << endl; */
+
+    /*-sıfıra kadar girilen sayıların tek yada çift olduğunu anlayan ve bunu çıktı olarak söyleyen bir program yaz
+    & operatörü kullanarak.*/
+    int number;
+    int c = 0;
+   
+    
+    cin >> number;
+   
+        if (number % 2 != 0) {
+
+            cout << "Number is odd" << endl;
+            c = number << 2;
+            cout << "new number is " << c << endl;
+               
+
+        }
+        else {
+            cout << "Number is even" << endl;
+            c = number >> 2;
+            cout << "new number is " << c << endl;
+        }
+       
+    
+
+
+
+    return 0;
+}

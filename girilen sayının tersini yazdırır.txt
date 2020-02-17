@@ -1,0 +1,15 @@
+
+#include <iostream>
+using namespace std;
+int main(){
+
+int number,kalan,tersSayi=0;
+cin>>number;
+
+for(int i=0;i<=number;i++){
+    kalan=number%10;
+    tersSayi=tersSayi*10+kalan;
+    number=number/10;
+}
+ cout<<tersSayi;
+}

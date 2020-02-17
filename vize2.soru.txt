@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void isDivisibleBy7(int number)
+{
+    if (number % 7 == 0)
+    {
+        cout << number << " ";
+    }
+}
+
+int main()
+{
+    int num;
+    cin >> num;
+    while (num != 0)
+    {
+        isDivisibleBy7(num);
+        cin >> num;
+    }
+    return 0;
+}

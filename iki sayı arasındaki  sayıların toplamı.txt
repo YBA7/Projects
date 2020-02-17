@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{ int birinciSayi,ikinciSayi,toplam;
+    cout<<"Birinci sayiyi giriniz :";
+    cin>>birinciSayi;
+    cout<<"Ikinci sayiyi giriniz :";
+    cin>>ikinciSayi;
+    toplam=0;
+    if(ikinciSayi>birinciSayi){
+    for(int i = birinciSayi;i<=ikinciSayi;i++){
+        toplam+=i;
+      }
+    }
+    else{
+        for(int i = ikinciSayi;i<=birinciSayi;i++){
+        toplam+=i;
+      }
+
+    }
+    cout<<toplam;
+
+
+    return 0;
+}
+

@@ -1,0 +1,84 @@
+#include <iostream>
+
+using namespace std;
+
+void order(int numA, int numB, int numC, int *minp, int *maxp, int *medp)
+{
+    if(numA>=numB){
+        *maxp=numA;
+        *minp=numB;
+    }
+    else{
+        *maxp=numB;
+        *minp=numA;
+    }
+    if(numC>=*maxp){
+        *maxp=numC;
+    }
+    else if(numC<=*minp){
+        *minp=numC;
+    }
+    *medp=numA+numB+numC-*maxp-*minp;
+}
+
+int main()
+{
+    int numA,numB,numC,min,max,med;
+
+    cin>>numA>>numB>>numC;
+    order(numA,numB,numC,&min,&max,&med);
+
+    cout<<min<<endl;
+    cout<<med<<endl;
+    cout<<max<<endl;
+
+
+    return 0;
+}
+
+
+
+
+
+KENDÝN YAPTIM 
+
+
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+void orderNumbers(double *ptrNumA, double *ptrNumB, double *ptrNumC) {
+	if (*ptrNumA >= *ptrNumB && *ptrNumB>=*ptrNumC) {
+
+		cout << *ptrNumA <<" "<< *ptrNumB <<" "<< *ptrNumC;
+	}
+	else if (*ptrNumB >= *ptrNumA && *ptrNumA >= *ptrNumC) {
+
+		cout << *ptrNumB <<" "<< *ptrNumA <<" "<< *ptrNumC;
+	}
+	else if (*ptrNumC >= *ptrNumA && *ptrNumA >= *ptrNumB) {
+
+		cout << *ptrNumC <<" "<< *ptrNumA <<" "<< *ptrNumB;
+	}
+	else if (*ptrNumC >= *ptrNumB && *ptrNumB >= *ptrNumA) {
+
+		cout << *ptrNumC <<" "<< *ptrNumB <<" "<< *ptrNumA;
+	}
+	else if (*ptrNumA >= *ptrNumC && *ptrNumC >= *ptrNumB) {
+
+		cout << *ptrNumA << " " << *ptrNumC << " " << *ptrNumB;
+	}
+
+
+}
+
+int main()
+{
+	double numA, numB, numC;
+	cin >> numA >> numB >> numC;
+
+	orderNumbers(&numA, &numB, &numC);
+
+	return 0;
+}
+

@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int sayimiktari,toplam,sayi;
+
+    cout<<"kac sayi girmek istiyorsunuz?==\n";
+    cin>>sayimiktari;
+    toplam=0;
+    for(int i =1;i<=sayimiktari;i++){
+        cin>>sayi;
+        toplam=toplam+sayi;
+    }
+    cout<<"toplam"<<toplam<<endl;
+   cout<<"sayi miktari"<<sayimiktari<<endl;
+    cout<<"ortalama"<<toplam/sayimiktari<<endl;
+
+
+
+
+ return 0;
+}

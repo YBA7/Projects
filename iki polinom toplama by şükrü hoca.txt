@@ -1,0 +1,55 @@
+#include <iostream>
+void calculateSumPolyCoeff(int rA, double pACoeff[], int rB, double pBCoeff[], double pSumCoeff[]);
+
+void calculateSumPolyCoeff(int rA, double pACoeff[], int rB, double pBCoeff[], double pSumCoeff[]){
+
+    if(rA >= rB){
+        for (int coeffIndex=0; coeffIndex<=rB; coeffIndex++){
+            pSumCoeff[coeffIndex] = pACoeff[coeffIndex] + pBCoeff[coeffIndex];
+        }
+        for (int coeffIndex=rB+1; coeffIndex<=rA; coeffIndex++){
+            pSumCoeff[coeffIndex] = pACoeff[coeffIndex];
+        }
+    }
+    else{
+        for (int coeffIndex=0; coeffIndex<=rA; coeffIndex++){
+            pSumCoeff[coeffIndex] = pACoeff[coeffIndex] + pBCoeff[coeffIndex];
+        }
+        for (int coeffIndex=rA+1; coeffIndex<=rB; coeffIndex++){
+            pSumCoeff[coeffIndex] = pBCoeff[coeffIndex];
+        }
+    }
+}
+
+int main() {
+    int rankA;
+    int rankB;
+    int rankSum;
+    double polynomACoeff[5000];
+    double polynomBCoeff[5000];
+    double polynomSumCoeff[5000];
+
+    std::cin >> rankA;
+    std::cin >> rankB;
+
+    for(int coeffIndex=0; coeffIndex<=rankA;coeffIndex++){
+        std::cin >> polynomACoeff[coeffIndex];
+    }
+    for(int coeffIndex=0; coeffIndex<=rankB;coeffIndex++){
+        std::cin >> polynomBCoeff[coeffIndex];
+    }
+
+    calculateSumPolyCoeff(rankA, polynomACoeff, rankB, polynomBCoeff, polynomSumCoeff);
+
+    if (rankA >= rankB){
+        rankSum = rankA;
+    }
+    else{
+        rankSum = rankB;
+    }
+    for(int coeffIndex=0; coeffIndex<=rankSum;coeffIndex++){
+        std::cout << polynomSumCoeff[coeffIndex] << "x^" << coeffIndex << "+ ";
+    }
+
+    return 0;
+}

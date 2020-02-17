@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int sayi,basamak1,toplam=0,factorial;
+
+  cin>>sayi;
+
+  while(sayi!=0){
+    basamak1=sayi%10;
+    sayi=sayi-basamak1;
+    factorial=1;
+    for(int i = 2;i<=basamak1;i++){
+        factorial*=i;
+    }
+    toplam=factorial+toplam;
+    sayi/=10;
+  }
+   cout<<toplam<<endl;
+    return 0;
+}

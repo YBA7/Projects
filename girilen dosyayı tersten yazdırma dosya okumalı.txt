@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string.h>
+#include <stdlib.h>
+#include <fstream>//file stream ekleme kutuphanesi
+
+/* ofstream=dosyaya yazi yazmak icin kullanilir outputun osu
+   ifstream = dosyadan yazi almak icin kullanilir inputun isi */
+using namespace std;
+
+string ters(string s)
+{
+
+    char *p,*q;
+    p=&s[0];
+    q=&s[0];
+    while(*p!='\0')
+    {
+        p++;
+    }
+    p--;
+    while(p>q)
+    {
+        char c = *p;
+        *p=*q;
+        *q=c;
+        p--;
+        q++;
+    }
+    return s;
+}
+
+
+int main()
+{
+    string s;
+    ifstream girdi;
+    girdi.open("girdi.txt");
+    while(getline(girdi,s))
+    {
+        cout<<ters(s)<<" "<<endl;
+    }
+    girdi.close();
+    return 0;
+}

@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int dizi[50000];
+    int number;
+    cin>>number;
+
+    for(int i = 0;i<number;i++){
+        cin>>dizi[i];
+    }
+
+    for(int i = 1;i<number;i++){
+        if(dizi[0]<dizi[i]){//en küçüðü bulmak için operatörün yönünün ">" yap.
+            dizi[0]=dizi[i];
+        }
+    }
+cout<<dizi[0];
+
+return 0;
+}

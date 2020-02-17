@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    int yukseklik;
+    int sayac,bosluk,yildiz;
+
+    cin >> yukseklik;
+    cout << endl;
+
+    for(sayac=1;sayac<=yukseklik;sayac++){//hangi satýrda olduðun iþlemini yapar.
+
+        for(bosluk=yukseklik-sayac;bosluk>=1;bosluk--){//hangi satýrda kaçtane boþluk býrakýlacak
+                 cout << " ";
+           }
+           for(yildiz=1;yildiz<=(sayac*2)-1;yildiz++){// sayac*2-1 iþlemi eþkaner üçgen olmasýný saðlar
+                 cout << "*";
+           }
+           cout << endl;
+    }
+
+    return 0;
+    }

@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	int sayi1,sayi2,sonuc=0;
+	cout << "Sayi1: ";
+		cin >> sayi1;
+	cout << "Sayi2: ";
+		cin >> sayi2;
+
+	while(sayi1<0 && sayi2<0) {
+		sonuc =sonuc - sayi2;
+		sayi1++;
+	}
+	while(sayi1<0 && sayi2>0) {
+		sonuc -= sayi2;
+		sayi1++;
+	}
+	while(sayi1>0) {
+		sonuc += sayi2;
+		sayi1--;
+	}
+
+	cout << "Sonuc: " << sonuc;
+}

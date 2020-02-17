@@ -1,0 +1,25 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main() {
+	int sýra = 0;
+	int dizi[60];
+	int i = 0;
+
+	ifstream inputFile;
+	inputFile.open("input1.txt");
+
+	while (!inputFile.eof()) {
+
+		inputFile >> sýra;
+		dizi[i]= sýra;
+		if (i % 2 == 1) {
+			cout << dizi[i] << " ";
+		}
+		i++;
+			
+	}
+	inputFile.close();
+}

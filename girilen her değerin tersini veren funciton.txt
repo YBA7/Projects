@@ -1,0 +1,97 @@
+#include <iostream>
+using namespace std;
+
+bool isLower(char ch){
+if(ch>=97 && ch<=122){
+   return true;
+  }
+  else{
+   return false;
+  }
+}
+bool  isUpper(char ch){
+    if(64<ch && ch<92){
+        return true;
+    }
+    else{
+       return false;
+    }
+}
+char toLower(char ch){
+
+     return (char)(int(ch)+32);
+}
+char toUpper(char ch){
+     return (char)(int(ch)-32);
+     }
+
+      bool isDigit (char ch){
+     if(47<ch && ch<65)
+     return true;
+     else
+     return false;
+ }
+void printDigit (char ch){
+       switch(ch){
+ case '0' :
+    cout<<"zero";
+    break;
+    case '1' :
+    cout<<"one";
+     break;
+     case '2' :
+    cout<<"two";
+     break;
+    case '3' :
+    cout<<"three";
+     break;
+    case '4' :
+    cout<<"four";
+     break;
+     case '5' :
+    cout<<"five";
+  break;
+    case '6' :
+    cout<<"six";
+     break;
+    case '7' :
+    cout<<"sevem";
+     break;
+    case '8' :
+    cout<<"eight";
+     break;
+     case '9' :
+    cout<<"nine";
+    break;
+     default:;
+     }
+
+
+
+}
+
+int main() {
+
+    char ch;
+
+    cin >>ch;
+
+
+    while(ch!='!'){
+
+        if(isLower(ch)){
+            cout<< toUpper(ch);
+        }
+        else if(isUpper(ch)){
+            cout<< toLower(ch);
+        }
+        else if(isDigit (ch)){
+           printDigit (ch);
+        }
+
+       else if(ch==' '){
+            cout << " ";
+       }
+      cin >> ch;
+    }
+}

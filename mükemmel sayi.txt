@@ -1,0 +1,27 @@
+
+#include <iostream>
+using namespace std;
+int main()
+{
+      int sayi, toplam, i,j;
+
+	  cin>>sayi;
+
+	  for(i = 1; i<sayi;i++){
+            toplam = 0;
+
+            for(j = 1;j<i;j++){
+
+                  if(i % j == 0){
+                      
+                  toplam += j;
+                  
+                  }
+            }
+
+            if(toplam == i){
+                cout<<i<<endl;
+            }
+      }
+    return 0;
+}

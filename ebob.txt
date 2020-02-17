@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int sayi1,sayi2,buyukSayi;
+ cout<<"sayi 1 =";
+ cin>>sayi1;
+ cout<<"sayi 2 =";
+ cin>>sayi2;
+
+    if(sayi1>sayi2){
+    buyukSayi = sayi1;
+    }
+    else {
+        buyukSayi=sayi2;
+    }
+ for(buyukSayi;buyukSayi>0;buyukSayi--)
+{
+    if((sayi1%buyukSayi==0)&&(sayi2%buyukSayi==0)){
+    cout<<"ebob ="<<buyukSayi;
+    break;
+    }
+
+}
+
+
+
+    return 0;
+}

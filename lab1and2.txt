@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+
+int eliminateCandidate(int array1[4][5]){
+    int sum=0;
+    int mini;
+    int maxi=0;
+    int minimumIndex;
+    for(int i=0; i<4; i++){
+        for(int j=0; j<5; j++){
+
+            sum+=array1[i][j];
+        }
+        if(i==0){
+            mini = sum;
+        }
+        if(mini>=sum){
+            mini=sum;
+            minimumIndex = i;
+        }
+        if(maxi<=sum){
+            maxi=sum;
+        }
+        sum=0;
+    }
+    array1[minimumIndex][0]=maxi;
+    return minimumIndex+1;
+
+}
+
+int main()
+{
+    int array1[4][5];
+    for(int i=0; i<4; i++){
+        for(int j=0; j<5; j++){
+            cin>>array1[i][j];
+        }
+    }
+    cout<<eliminateCandidate(array1)<<endl;
+    cout<<eliminateCandidate(array1)<<endl;
+    cout<<eliminateCandidate(array1)<<endl;
+    return 0;
+}

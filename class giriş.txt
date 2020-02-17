@@ -1,0 +1,14 @@
+/* class Student {
+public:
+	string name;
+};
+
+int main()
+{
+	Student student1;
+	Student student2;
+	student1.name = "Yagiz Batur Akbayir";
+	student2.name = "Esra Akbayir";
+	cout << student1.name << "\n" << student2.name;
+	return 0;
+}*/

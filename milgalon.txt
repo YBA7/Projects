@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+  float mil,galon,toplamMil,toplamGalon;
+  toplamGalon=toplamMil=0;
+
+  while(mil){
+
+        cout<<"Mil'i giriniz(cikmak icin -1 ' e basiniz.): ";
+        cin>>mil;
+        if(mil == -1){break;}
+        cout<<"Bu mil zarfinda yaktiginiz galonu yaziniz : ";
+        cin>>galon;
+        cout<<"bu gezi icin harcanan MPG ="<<mil/galon<<endl;
+        toplamMil+=mil;
+        toplamGalon+=galon;
+        cout<<"Toplam MPG:"<<toplamMil/toplamGalon<<endl;
+
+  }
+}

@@ -1,0 +1,25 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int eleman = 0;
+    int upperCase = 0;
+    int lowerCase = 0;
+    char dizi[15];
+   cin >> dizi[eleman];
+    
+    while (dizi[eleman]!='%') {
+        if (dizi[eleman] >= 'a' && dizi[eleman] <= 'z') {
+            lowerCase++;
+     }
+        else {
+            upperCase++;
+        }
+        cin >> dizi[eleman];
+    }
+    cout << lowerCase << "  " << upperCase;
+
+    return 0;
+}
